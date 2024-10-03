@@ -1,12 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './index.css';
 import BG from '../../../../assets/images/pastelnata.jpg';
 import BRAIN from '../../../../assets/images/brain.svg';
+import emailjs from 'emailjs-com';
 
 //get grid from mui
 import { TextField, Button, Grid, Container, Typography, LinearProgress } from '@mui/material';
 
 function Section4() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        description: '',
+      });
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+    
+        emailjs.send('service_wji5su8', 'template_kbi1sda', formData, 'XpOGHHT8ludThwjWM')
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
+      };
   return (
     <>
       <Grid container sx={{
@@ -43,7 +66,10 @@ function Section4() {
           <TextField
             label="Name"
             fullWidth
+            name='nome'
             variant="outlined"
+            onChange={handleChange}
+
             sx={{
               width: "100%",  // Take full width of the container
               marginBottom: "15px",
@@ -75,8 +101,11 @@ function Section4() {
           <TextField
             label="Email"
             type="email"
+            name='email'
             fullWidth
             variant="outlined"
+            onChange={handleChange}
+
             sx={{
               width: "100%",  // Take full width of the container
               marginBottom: "15px",
@@ -107,10 +136,13 @@ function Section4() {
           
           <TextField
             label="Description"
+            name='descricao'
             multiline
             rows={4}
             fullWidth
             variant="outlined"
+            onChange={handleChange}
+
             sx={{
               width: "100%",  // Take full width of the container
               marginBottom: "15px",
@@ -141,6 +173,7 @@ function Section4() {
 
           <Button 
             variant="contained" 
+            onClick={handleSubmit}
             sx={{ 
                 borderRadius: "0",  // Remove border radius
               width: "100%",  // Take full width of the container
