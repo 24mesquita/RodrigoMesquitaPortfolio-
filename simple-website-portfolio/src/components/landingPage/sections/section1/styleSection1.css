@@ -1,0 +1,262 @@
+
+.title{
+  text-align: center;
+    font-size: 3rem;
+    font-family: poppins;
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #fff; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 1.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+
+}
+
+
+.TitleBox{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding:16px 0px;
+
+}
+.titleBoxDiv{
+  width: fit-content;
+}
+.subtitleBoxDiv{
+  width: fit-content;
+}
+
+.subtitleBox{
+  justify-content: center;
+  display: flex;
+    width: 100%;
+    padding:16px 0px;
+}
+
+
+
+.subtitle{
+  text-align: center;
+    font-size: 1.5rem;
+    font-family: poppins;
+    color: #fff;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #fff; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+    typing 1s steps(40, end),
+    blink-caret .75s step-end infinite;
+
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@keyframes visibility {
+  from { visibility: hidden }
+  to { visibility: visible }
+}
+@keyframes border-color {
+  to { border-color: transparent; }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .socialMediaBox{
+    width:30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(100%) brightness(50%);
+}
+
+
+.socialMediaBox{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+} 
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+  @keyframes visibility {
+    from { visibility: hidden }
+    to { visibility: visible }
+  }
+  @keyframes border-color {
+    to { border-color: transparent; }
+}
+
+.instagram{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.instagram:hover{
+  fill: #c13584;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+
+
+
+.facebook{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  cursor: pointer
+}
+
+.facebook:hover{
+  fill: #3b5998;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+.facebook:hover>.socialMediaBox{
+  fill: #3b5998;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+
+.linkedin{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.linkedin:hover{
+  fill: #0e76a8;
+  transition: 0.2s;
+  cursor: pointer
+}
+.gitHub{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.gitHub:hover{
+  fill: #211f1f;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+.twitter{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.twitter:hover{
+  fill: #1da1f2;
+  transition: 0.2s;
+  cursor: pointer
+}
+.spotify{
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+.spotify:hover{
+  fill: #1db954;
+  transition: 0.2s;
+  cursor: pointer
+}
+
+
+
+
+.mouse {
+	width: 40px;
+	height: 70px;
+	border: 3px solid #fff;
+	border-radius: 60px;
+	position: relative;
+  margin-bottom: 16px;
+	&::before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #fff;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}

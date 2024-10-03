@@ -13,14 +13,13 @@ function Menu() {
 
         <div className="menu" >
             <ul>
-                <li ><a href="#" >home</a>
+                <li ><a href="/" >home</a>
                     <div className="menu-line active"></div>
                 </li>
-
-                <li><a href="#">journey</a>
+                <li><a href="/journey">journey</a>
                     <div className="menu-line"></div>
                 </li>
-                <li><a href="#">skills</a>
+                <li><a href="/Skills">skills</a>
                     <div className="menu-line"></div>
                 </li>
                 <li><a href="#">hobbies</a>
