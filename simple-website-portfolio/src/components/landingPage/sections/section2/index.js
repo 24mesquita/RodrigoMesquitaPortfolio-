@@ -15,10 +15,11 @@ function Section2() {
         backgroundPosition: "center",
         justifyContent: "flex-start",  // Align content to the top
         alignItems: "flex-start",      // Align content to the top
-        paddingTop: "50px",            // Padding for the title section
-        height: "100vh",
+        padding: "32px",            // Padding for the title section
+        minHeight: "100vh",
         width: "100vw",
         position: "relative",
+
       }}>
         <Grid container xs={12} sx={{ justifyContent: "center", alignItems: "flex-start", width: "100%" }}>
           <Grid item xs={12} className='titleBoxSection2' sx={{ marginBottom: "0px" }}> {/* Title stays in place */}
