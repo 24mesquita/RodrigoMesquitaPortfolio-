@@ -1,8 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+}
 .title{
   text-align: center;
     font-size: 3rem;
-    font-family: poppins;
     color: #fff;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #fff; /* The typwriter cursor */
@@ -41,7 +43,6 @@
 .subtitle{
   text-align: center;
     font-size: 1.5rem;
-    font-family: poppins;
     color: #fff;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #fff; /* The typwriter cursor */

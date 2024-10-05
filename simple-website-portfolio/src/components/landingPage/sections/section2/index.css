@@ -8,7 +8,7 @@ body, html {
   color: #FFF;
 margin: 0;
   text-align: center;
-  font-family: Poppins;
+  
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -24,10 +24,9 @@ margin: 0;
 
 .descriptionAbout{
   color: #FFF;
-  margin: 0;
   text-align: center;
-  font-family: Poppins;
-  font-size: 32px;
+  
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;  
